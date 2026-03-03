@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./header-composant.component.css']
 })
 export class HeaderComposantComponent {
-
+  nomUtilisateur: string = 'Jean';
 }
+
