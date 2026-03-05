@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { UserService } from '../services/user.service';
 
 @Component({
   selector: 'app-header-composant',
@@ -6,6 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./header-composant.component.css']
 })
 export class HeaderComposantComponent {
-  nomUtilisateur: string = 'Jean';
+  public nomUtilisateur = "";
+  constructor(private userService: UserService) { }
+  ngOnInit(): void {
+    this.nomUtilisateur = this.userService.getUsername();
+  }
 }
 
